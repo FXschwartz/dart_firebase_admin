@@ -12,12 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+@Tags(['firebase-emulator'])
+library;
+
 import 'dart:typed_data';
 
 import 'package:google_cloud_firestore/google_cloud_firestore.dart';
 import 'package:test/test.dart' hide throwsArgumentError;
 
-import '../fixtures/helpers.dart';
+import 'fixtures/helpers.dart';
 
 void main() {
   group('DocumentReference', () {
@@ -329,7 +332,6 @@ void main() {
         expect(data, {'reference': otherDoc});
       });
     });
-
 
     group('text string', () {
       test('serializes unicode keys', () async {
